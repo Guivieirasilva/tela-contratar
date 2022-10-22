@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "tela-contratar",
+    "slug": "tela-contratar",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
