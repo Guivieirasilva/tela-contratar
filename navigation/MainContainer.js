@@ -40,11 +40,13 @@ export function MainContainer(){
                },
                tabBarActiveTintColor: '#6D7A78',
                tabBarInactiveTintColor: '#6D7A78',
-               tabBarLabelStyle: { fontSize: 10, backgroundColor: "transparent",padding: 2, marginBottom: 10},
+               tabBarLabelStyle: { fontSize: 10,padding: 2, marginBottom: 10},
                tabBarStyle: {padding: 5, height: 70},
+               headerShown: false,
+               
             })}
          >
-         <Tab.Screen name={homeName} component={HomeScreen} />
+         <Tab.Screen name={homeName}  component={HomeScreen} />
          <Tab.Screen name={shiftsName} component={ShiftsScreen} />
          <Tab.Screen name={favoritesName} component={FavoritesScreen} />
          <Tab.Screen name={accountName} component={MyAccountScreen} />

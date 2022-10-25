@@ -26,12 +26,13 @@ const styles = StyleSheet.create({
    heading:{
       width: '100%',
       flexDirection: 'row',
-      alignItems: 'center',
+      alignItems: 'flex-end',
       paddingHorizontal: 32,
-      paddingVertical: 10,
+      paddingVertical: 20,
       backgroundColor: '#006557',
       justifyContent:'space-between',
-      marginBottom: 40,
+      marginBottom: 20,
+      height:80,
       
    },
    title:{
