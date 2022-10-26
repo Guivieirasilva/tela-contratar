@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, StatusBar } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { Header } from '../../components/Header'
+import IonIcons from 'react-native-vector-icons/Ionicons'
 
 export function HomeScreen() {
    const [text, setText] = React.useState('')
@@ -19,18 +19,34 @@ export function HomeScreen() {
                <TextInput
                   style={styles.input}
                   placeholder='Nome do paciente'
+                  placeholderTextColor={'#596563'}
+
                   onChangeText={setText}
                   value={text}
                />
-               <TextInput
-                  style={styles.inputMid}
-                  placeholder='Dia'
-               />
-               <TextInput
-                  style={styles.input}
-                  placeholder='Horário'
-               />
+            
+               <View style={styles.inputDay}>
+                  <TextInput
+                     placeholder='Dia'
+                     placeholderTextColor={'#596563'}
+                     style={{width: 200}}
+
+                  /> 
+                  <IonIcons name='chevron-down-outline' size={25} color={'#596563'} />
+               </View>   
+
+               <View style={styles.inputhours}>
+                  <TextInput
+                     placeholder='Horário'
+                     placeholderTextColor={'#596563'}
+                     style={{width: 200}}
+
+                  /> 
+                  <IonIcons name='chevron-down-outline' size={25} color={'#596563'} />
+               </View>      
+                        
             </View>
+
             
 
             <TouchableOpacity
@@ -55,7 +71,7 @@ export function HomeScreen() {
                   Voltar
                </Text>
             </TouchableOpacity>
-         
+
          </View>
 
 
@@ -84,15 +100,31 @@ const styles = StyleSheet.create({
       borderWidth: 2,
       paddingLeft: 15,
    },
-   inputMid: {
+   inputDay: {
       width: 300,
       height: 60,
       backgroundColor: 'white',
       borderColor: '#DEDEDE',
       borderWidth: 2,
       paddingLeft: 15,
+      paddingRight: 15,
+      alignItems:  'center',
+      justifyContent: 'space-between',
+      flexDirection: 'row',
       borderBottomColor: 'transparent',
       borderTopColor: 'transparent',
+   },
+   inputhours:{
+      width: 300,
+      height: 60,
+      backgroundColor: 'white',
+      borderColor: '#DEDEDE',
+      borderWidth: 2,
+      paddingLeft: 15,
+      paddingRight: 15,
+      alignItems:  'center',
+      justifyContent: 'space-between',
+      flexDirection: 'row',
    },
    button: {
       backgroundColor: '#07689F',
